@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>lyds_tools</name>
-  <version>0.0.0</version>
+  <version>0.0.1</version>
   <description>LYDS tools for ROS2 application</description>
   <maintainer email="edward.liao@lyds.tech">edward.liao</maintainer>
   <license>BSD</license>

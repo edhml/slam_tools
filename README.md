@@ -32,7 +32,52 @@ Model: vlp16
 git clone https://github.com/edhml/velodyne.git
 ```
 
+### Ouster Driver
+
+Model: os1
+
+```
+git clone https://github.com/edhml/ros2_ouster_drivers.git
+```
+
+# Build workspace
+
+```
+colcon build --symlink-install
+
+source install/local_setup.bash
+```
+
+# Start 3D SLAM
+
+Run with velodyne-vlp16 LiDAR
+
+```
+ros2 launch slam_tools lidar_slam_3d_vlp16.launch.py
+```
+
+or run with ouster-os1 liDAR
+
+```
+ros2 launch slam_tools lidar_slam_3d_os1.launch.py
+```
+
+Save map with serivce call. The map will be saved in slam_tools where it launch workspace with a default name, which is map.pcd.
+
+```
+ros2 service call /map_save std_srvs/Empty
+```
+
+Review your 3D map by installing pcl-tools.
+
+```
+sudo apt install pcl-tools
+
+pcl_viewer /path/to/your/map.pcd
+```
+
 # Demo Bags
 
 Provide not yet. (Will be provided soon.)
+
 

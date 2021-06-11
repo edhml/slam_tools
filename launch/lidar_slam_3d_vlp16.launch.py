@@ -17,7 +17,7 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
 
     # Unified Robot Description Format
-    pkg_share = FindPackageShare('lyds_tools').find('lyds_tools')
+    pkg_share = FindPackageShare('slam_tools').find('slam_tools')
     urdf_file = os.path.join(pkg_share, 'urdf', 'freestyle_basic.urdf.xml')
     with open(urdf_file, 'r') as infp:
         robot_desc = infp.read()
@@ -26,10 +26,10 @@ def generate_launch_description():
     # Package directory prefix
     lidar_driver_pkg_prefix = get_package_share_directory('velodyne')
     slam_tool_pkg_prefix = get_package_share_directory('lidarslam')
-    lyds_tools_pkg_prefix = get_package_share_directory('lyds_tools')
+    slam_tools_pkg_prefix = get_package_share_directory('slam_tools')
 
     # Nodes configurations
-    rviz_config_file = os.path.join(lyds_tools_pkg_prefix, 'rviz', 'vlp16_3d_lidar_slam.rviz')
+    rviz_config_file = os.path.join(slam_tools_pkg_prefix, 'rviz', 'lidar_slam_3d_vlp16.rviz')
 
     # Drivers
     lidar_driver = IncludeLaunchDescription(

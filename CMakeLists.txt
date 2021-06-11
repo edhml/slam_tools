@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(lyds_tools)
+project(slam_tools)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)

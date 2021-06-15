@@ -25,7 +25,6 @@ def generate_launch_description():
 
     # Package directory prefix
     lidar_driver_pkg_prefix = get_package_share_directory('ros2_ouster')
-    slam_tool_pkg_prefix = get_package_share_directory('lidarslam')
     slam_tools_pkg_prefix = get_package_share_directory('slam_tools')
 
     # Nodes configurations
@@ -50,8 +49,8 @@ def generate_launch_description():
 
     # SLAM
     slam_tool = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([slam_tool_pkg_prefix,
-                '/launch/ndt_freestyle_slam.launch.py'])
+            PythonLaunchDescriptionSource([slam_tools_pkg_prefix,
+                '/launch/lidar_slam_ndt_freestyle.launch.py'])
     )
     # Visualization_tool
     visaul_tool = Node(

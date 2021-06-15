@@ -8,7 +8,16 @@ These tools can help you quick start with 3D SLAM. Some of dependent packages ne
 
 # Dependent Packages
 
-## 3D SLAM Package
+## 2D SLAM
+
+Currently support slam_toolbox.
+
+### slam_toolbox
+
+```
+```
+
+## 3D SLAM
 
 Currently support one type.
 
@@ -68,6 +77,8 @@ Save map with serivce call. The map will be saved in slam_tools where it launch 
 ros2 service call /map_save std_srvs/Empty
 ```
 
+![lidar_slam_3d_image](/images/lidar_slam_3d_save_side_view.png?raw=true "Lidar SLAM 3D Image")
+
 Review your 3D map by installing pcl-tools.
 
 ```
@@ -75,6 +86,8 @@ sudo apt install pcl-tools
 
 pcl_viewer /path/to/your/map.pcd
 ```
+
+![lidar_slam_3d_image](/images/pose_graph.png?raw=true "Lidar SLAM 3D Image")
 
 # Demo Bags
 

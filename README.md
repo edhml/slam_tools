@@ -15,7 +15,7 @@ Ouster: os1
 What we have done:
 - Help you quick start slam with common state-of-art 3D LiDAR by lidar odomtery configuration
 - Fix some of driver, algorithm or configuration are not compatible to slam packages problem
-- Unify the configuration of device drivers or ROS2 package configuration, such as topic, frame_id and urdf ... etc
+- Unify the configuration of device drivers or ROS2 package, such as topic, frame_id and urdf ... etc
 - Provide a ros2 bag meta-data for you to both start and learn 2D/3D slam on ROS2 framework, even you temporarily cannot afford these fancy devices
 
 ## 2D SLAM
@@ -85,12 +85,15 @@ or run via ouster-os1 LiDAR
 ros2 launch slam_tools slam_toolbox_2d_os1.launch.py
 ```
 
+![slam_toolbox_2d_image](/images/slam_toolbox_side_view.png?raw=true "Lidar SLAM 2D")
+
 Save map with the following service call, then map will be save as a pgm image format.
 
 ```
 ros2 service call /slam_toolbox/save_map slam_toolbox/srv/SaveMap
-
 ```
+
+![slam_toolbox_2d_image](/images/slam_toolbox_map_2d.png?raw=true "Lidar SLAM 2D Image")
 
 ## Start 3D SLAM
 

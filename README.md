@@ -4,7 +4,7 @@
 
 This package mainly help you quick start both 2D and 3D SLAM due to lack information or tutorials on ROS2 middleware for newbie. The package will not focus on creating a new SLAM algorithm or constructing SLAM relevant knowledge. But we may add links to help you learn from original authors. 
 
-Some of dependent packages need to be downloaded first. If you would like to simplified obtain all dependencies at once, refer to [quick_start_to_slam](https://github.com/edhml/quick_start_to_slam.git)
+Some of dependent packages need to be downloaded first. If you would like to simplified obtain all dependencies at once, refer to [quick_start_to_slam](https://github.com/edhml/quick_start_to_slam.git).
 
 Currently verified vendor and LiDAR models: 
 
@@ -13,7 +13,7 @@ Velodyne: vlp16
 Ouster: os1
 
 What we have done:
-- Help you quick start slam with common state-of-art 3D LiDAR by lidar odomtery configuration
+- Help you quick start slam with common state-of-art 3D LiDAR by lidar odometry configuration
 - Fix some of driver, algorithm or configuration are not compatible to slam packages problem
 - Unify the configuration of device drivers or ROS2 package, such as topic, frame_id and urdf ... etc
 - Provide a ros2 bag meta-data for you to both start and learn 2D/3D slam on ROS2 framework, even you temporarily cannot afford these fancy devices

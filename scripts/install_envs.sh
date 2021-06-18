@@ -20,23 +20,26 @@ VERSION="conditional_build_of_builtin_types"
 # test: a0585942a9e1a7255aa7c43452fd5fb2a8b869a4
 
 userws=`pwd`
-[ -d "/tmp/g2o" ] && rm -rf /tmp/g2o/
-
-cd /tmp/
 
 # Build and install g2o library
-git clone -b ${VERSION} https://github.com/RainerKuemmerle/g2o.git
-cd g2o
+if [ -z "`ldconfig -p | grep libg2o`" ]; then
 
-[ ! -d "/usr/include/eigen3" ] && ./script/install-deps-linux.sh
+  [ -d "/tmp/g2o" ] && rm -rf /tmp/g2o/
+  cd /tmp/
+  
+  git clone -b ${VERSION} https://github.com/RainerKuemmerle/g2o.git
+  cd g2o
 
-mkdir build && cd $_
-cmake ..
-make -j`nproc`
-sudo make install
-sudo ldconfig
+  [ ! -d "/usr/include/eigen3" ] && ./script/install-deps-linux.sh
 
-cd ${userws}
+  mkdir build && cd $_
+  cmake ..
+  make -j`nproc`
+  sudo make install
+  sudo ldconfig
+
+  cd ${userws}
+fi
 
 # Install necessary libraries
 sudo apt install -y \

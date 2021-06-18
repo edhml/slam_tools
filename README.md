@@ -139,4 +139,3 @@ Not yet to provide. (Will be soon.)
 
 Let's move onto ROS2 for better development experience.
 
-Copyright 2021 The LYDS Authors
